@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Guestbook</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/guestbook">Guestbook</a>
+    </nav>
+    <main>
+        <h1>Guestbook</h1>
+        <p>Leave a quick comment for everyone to see.</p>
+        <form action="/guestbook" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="comment">Comment</label>
+            <textarea id="comment" name="comment" rows="3" required></textarea>
+
+            <button type="submit">Sign</button>
+        </form>
+    </main>
+</body>
+</html>
