@@ -22,7 +22,7 @@ Normativa para elaboración de informes periciales
 
 > Tecnologías de la información (TI).Sistema de Gestión de Evidencias Electrónicas (SGEE). Parte 3: Formatos y mecanismos técnicos.
 
-## UNE 71506:2013 (Obligatoria)
+## UNE 71506:2013 (Obligatoria) (Preservación, Adquisición, Documentación, Análisis, Presentación)
 
 > Tecnologías de la información (TI). Metodología para el análisis forense de las evidencias electrónicas.
 
@@ -88,7 +88,7 @@ Quienes deben decidir sobre la credibilidad de la evidencia también pueden apoy
 - **Contexto UNE en España.** Según la ficha de UNE citada por ese laboratorio, la UNE 71506:2013 figura como anulada desde el 19 de febrero de 2026. Siguen vigentes la serie UNE 71505 y la UNE 197010:2015, esta última sobre informes periciales. Verifícalo en el catálogo de UNE antes de citarlo en un informe.
 - **Valor ante el tribunal.** En el proceso civil, el tribunal valora el dictamen según las reglas de la sana crítica (art. 348 LEC). Seguir la norma no garantiza la validez de la prueba, pero ofrece un criterio reconocido para defender el método.
 
-## UNE-EN ISO/IEC 27037:2016 (Obligatoria)
+## UNE-EN ISO/IEC 27037:2016 (Obligatoria) (Identificación, Recogida, Adquisición, )
 
 > Tecnologías de la Información (TI). Directrices para la identificación, recogida, adquisición y preservación de evidencias electrónicas
 
