@@ -431,7 +431,7 @@ Escaneo de puertos: nc -zv 192.168.1.20 20-25
 
 
 
-Comando openssl s_client (manpage)
+Comando s s_client (manpage)
 Permite probar conexiones TLS/SSL.
 
 Operando principal -connect

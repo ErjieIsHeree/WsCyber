@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>Mi catálogo de películas</title>
+        <link rel="stylesheet" href="estilo.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Catálogo de películas</h1>
+        </header>
+
+        <main>
+            <!-- 1. El formulario de búsqueda. Necesita: 
+            - un <form> con un id 
+            - un <input> de texto con un id, para escribir el título 
+            - un <button> para enviar                                    -->
+            <form id="formulario-busqueda">
+                <label for="campo-titulo">Buscar por título</label>
+                <input
+                    type="text"
+                    id="campo-titulo"
+                    name="titulo"
+                    placeholder="Escribe parte de un título..."
+                    autocomplete="off"
+                />
+                <button type="submit">Buscar</button>
+                <button type="button" id="boton-todas">Ver todas</button>
+            </form>
+
+            <!-- 2. Una caja vacía donde aparecerán los resultados. 
+            Un <section> o un <div> con un id es suficiente.              -->
+            <section id="resultados" aria-live="polite">
+                <p>Cargando el catálogo...</p>
+            </section>
+        </main>
+
+        <script src="app.js" defer></script>
+    </body>
+</html>
