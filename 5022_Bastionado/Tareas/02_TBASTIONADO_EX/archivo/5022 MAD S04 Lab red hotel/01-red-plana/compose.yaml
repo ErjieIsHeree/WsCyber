@@ -1,0 +1,56 @@
+# Hotel Los Almendros HOY: todo en una sola red 10.50.1.0/24
+services:
+    fw:
+        image: alpine
+        container_name: fw
+        cap_add: [NET_ADMIN]
+        sysctls: { net.ipv4.ip_forward: 1 }
+        volumes: ["./reglas.sh:/reglas.sh:ro"]
+        command: sh -c "apk add --no-cache iptables && sh /reglas.sh && sleep infinity"
+        networks:
+            DMZ: { ipv4_address: 10.50.10.254 }
+            Personal: { ipv4_address: 10.50.20.254 }
+            Servidores: { ipv4_address: 10.50.30.254 }
+            IoT: { ipv4_address: 10.50.40.254 }
+            Invitados: { ipv4_address: 10.50.50.254 }
+    web: # motor de reservas que recibe reservas desde Internet
+        image: nginx:alpine
+        container_name: web
+        cap_add: [NET_ADMIN]
+        command: sh -c "ip route del default; ip route add default via 10.50.10.254; echo WEB DE RESERVAS > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'"
+        networks: { DMZ: { ipv4_address: 10.50.10.10 } }
+    srv-reservas: # servidor con datos de clientes, DNI y facturas
+        image: nginx:alpine
+        container_name: srv-reservas
+        cap_add: [NET_ADMIN]
+        command: sh -c "ip route del default; ip route add default via 10.50.30.254; echo DATOS DE CLIENTES Y FACTURAS > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'"
+        networks: { Servidores: { ipv4_address: 10.50.30.10 } }
+    pc-recepcion:
+        image: alpine
+        container_name: pc-recepcion
+        cap_add: [NET_ADMIN]
+        command: sh -c "ip route del default; ip route add default via 10.50.20.254; sleep infinity"
+        networks: { Personal: { ipv4_address: 10.50.20.10 } }
+    camara:
+        image: alpine
+        container_name: camara
+        cap_add: [NET_ADMIN]
+        command: sh -c "ip route del default; ip route add default via 10.50.40.254; sleep infinity"
+        networks: { IoT: { ipv4_address: 10.50.40.10 } }
+    huesped: # portátil de un huésped en la wifi
+        image: alpine
+        container_name: huesped
+        cap_add: [NET_ADMIN]
+        command: sh -c "ip route del default; ip route add default via 10.50.50.254; sleep infinity"
+        networks: { Invitados: { ipv4_address: 10.50.50.10 } }
+networks:
+    DMZ:
+        ipam: { config: [{ subnet: 10.50.10.0/24 }] }
+    Personal:
+        ipam: { config: [{ subnet: 10.50.20.0/24 }] }
+    Servidores:
+        ipam: { config: [{ subnet: 10.50.30.0/24 }] }
+    IoT:
+        ipam: { config: [{ subnet: 10.50.40.0/24 }] }
+    Invitados:
+        ipam: { config: [{ subnet: 10.50.50.0/24 }] }
