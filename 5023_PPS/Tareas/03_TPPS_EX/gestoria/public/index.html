@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>Gestoría Alcalá - Expedientes</title>
+        <link rel="stylesheet" href="estilo.css" />
+        <!-- TODO: quitar el usuario de pruebas admin/admin antes de publicar -->
+    </head>
+    <body>
+        <header><h1>Consulta de expedientes</h1></header>
+        <main>
+            <form id="busqueda">
+                <label for="titular">Titular</label>
+                <input id="titular" name="titular" maxlength="40" required />
+                <input type="hidden" name="perfil" value="cliente" />
+                <button type="submit">Buscar</button>
+            </form>
+            <section id="resultado"></section>
+            <a id="ayuda" href="https://ejemplo-externo.test/ayuda" target="_blank">Ayuda</a>
+        </main>
+        <script src="config.js"></script>
+        <script src="app.js" defer></script>
+    </body>
+</html>

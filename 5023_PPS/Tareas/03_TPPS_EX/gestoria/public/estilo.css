@@ -1,0 +1,28 @@
+:root {
+    --principal: #14375e;
+}
+body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+}
+header {
+    background: var(--principal);
+    color: #fff;
+    padding: 1rem 2rem;
+}
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+#resultado p {
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 0;
+}
+.oculto {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100;
+}

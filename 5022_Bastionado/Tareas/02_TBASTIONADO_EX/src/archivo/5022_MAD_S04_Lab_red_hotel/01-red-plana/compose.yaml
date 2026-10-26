@@ -1,0 +1,30 @@
+# Hotel Los Almendros HOY: todo en una sola red 10.50.1.0/24
+services:
+    web: # motor de reservas que recibe reservas desde Internet
+        image: nginx:alpine
+        container_name: web
+        command: sh -c "echo WEB DE RESERVAS > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'"
+        networks: { hotel: { ipv4_address: 10.50.1.10 } }
+    srv-reservas: # servidor con datos de clientes, DNI y facturas
+        image: nginx:alpine
+        container_name: srv-reservas
+        command: sh -c "echo DATOS DE CLIENTES Y FACTURAS > /usr/share/nginx/html/index.html && nginx -g 'daemon off;'"
+        networks: { hotel: { ipv4_address: 10.50.1.20 } }
+    pc-recepcion:
+        image: alpine
+        container_name: pc-recepcion
+        command: sleep infinity
+        networks: { hotel: { ipv4_address: 10.50.1.30 } }
+    camara:
+        image: alpine
+        container_name: camara
+        command: sleep infinity
+        networks: { hotel: { ipv4_address: 10.50.1.40 } }
+    huesped: # portátil de un huésped en la wifi
+        image: alpine
+        container_name: huesped
+        command: sleep infinity
+        networks: { hotel: { ipv4_address: 10.50.1.50 } }
+networks:
+    hotel:
+        ipam: { config: [{ subnet: 10.50.1.0/24 }] }
