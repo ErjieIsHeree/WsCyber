@@ -9,9 +9,9 @@ formulario.addEventListener("submit", async evento => {
         return;
     }
 
-    const respuesta = await fetch("/api/expedientes?titular=" + titular + "&key=" + API_KEY);
+    const respuesta = await fetch("/api/expedientes?titular=" + encodeURIComponent(titular));
     const datos = await respuesta.json();
 
-    salida.innerHTML =
+    salida.textContent =
         "<h2>Resultados de " + titular + "</h2>" + datos.map(d => "<p>" + d.ref + " - " + d.titular + "</p>").join("");
 });

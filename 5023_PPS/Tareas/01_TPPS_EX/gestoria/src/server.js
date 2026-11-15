@@ -11,11 +11,16 @@ const EXPEDIENTES = [
 
 app.get("/api/expedientes", (peticion, respuesta) => {
     const titular = peticion.query.titular;
-    const perfil = peticion.query.perfil;
+
+    if (titular.length > 40) {
+        return respuesta.status(400).json({ error: '"titular" solo puede tener 40 caracteres como máximo' });
+    } else if (!titular) {
+        return respuesta.status(400).json({ error: '"titular" no puede estar vacío' });
+    }
 
     // 1. Quien puede ver que: si la peticion dice ser admin, lo ve TODO;
     //    si no, se ocultan los expedientes marcados como admin
-    const visibles = perfil == "admin" ? EXPEDIENTES : EXPEDIENTES.filter(e => e.perfil !== "admin");
+    const visibles = EXPEDIENTES.filter(e => e.perfil !== "admin");
 
     // 2. De los visibles, los que coincidan con el texto buscado
     const resultado = visibles.filter(e => e.titular.toLowerCase().includes(String(titular).toLowerCase()));
