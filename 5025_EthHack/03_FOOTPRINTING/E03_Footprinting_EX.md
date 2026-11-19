@@ -33,18 +33,18 @@ Es una página web corporativa cuya finalidad es presentar la empresa. Cuenta co
 
 Entrega: una captura y un párrafo explicativo.
 
-TODO ## 3. Consultar DNS
+## 3. Consultar DNS
 
-| Duda                          | Comando                     | Respuesta | Interpretación |
-| ----------------------------- | --------------------------- | --------- | -------------- |
-| ¿Qué IPv4 publica?            | dig ejemplo.com A           |           |                |
-| ¿Qué IPv6 publica?            | dig ejemplo.com AAAA        |           |                |
-| ¿Qué servidores DNS declara?  | dig ejemplo.com NS          |           |                |
-| ¿Dónde recibe correo?         | dig ejemplo.com MX          |           |                |
-| ¿Qué información TXT publica? | dig ejemplo.com TXT         |           |                |
-| ¿Qué política CAA publica?    | dig ejemplo.com CAA         |           |                |
-| ¿www es un alias?             | dig <www.ejemplo.com> CNAME |           |                |
-| ¿Qué IPv4 devuelve www?       | dig <www.ejemplo.com> A     |           |                |
+| Duda                          | Comando                     | Respuesta                                                                                                                                                                                            | Interpretación |
+| ----------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| ¿Qué IPv4 publica?            | dig ejemplo.com A           | 75.2.60.5                                                                                                                                                                                            |                |
+| ¿Qué IPv6 publica?            | dig ejemplo.com AAAA        | Sin respuesta                                                                                                                                                                                        |                |
+| ¿Qué servidores DNS declara?  | dig ejemplo.com NS          | ns4.cdmondns-01.org. \ ns5.cdmondns-01.com. \ ns3.cdmon.net. \ ns1.cdmon.net. \ ns2.cdmon.net.                                                                                                       |                |
+| ¿Dónde recibe correo?         | dig ejemplo.com MX          | 10 mail.informaticoadomicilio.com.                                                                                                                                                                   |                |
+| ¿Qué información TXT publica? | dig ejemplo.com TXT         | bd5MKJfGDWFCTP5_Sb3f-DpyHC0D7JjHCfOnVk7r30E \ o7g41q07uT4QtKB776131DGo2czi5Wys4EdyufPew6s  \ google-site-verification=fufzpwBaJz7ujS97WDvsOb7ehksD2pPsyYmX7aT2S1Y \ v=spf1 include:_spf.srv.cat ~all |                |
+| ¿Qué política CAA publica?    | dig ejemplo.com CAA         | ns1.cdmon.net. hostmaster.informaticoadomicilio.com. 1 10800 3600 604800 3600                                                                                                                        |                |
+| ¿www es un alias?             | dig <www.ejemplo.com> CNAME | ns1.cdmon.net. hostmaster.informaticoadomicilio.com. 1 10800 3600 604800 3600                                                                                                                        |                |
+| ¿Qué IPv4 devuelve www?       | dig <www.ejemplo.com> A     | 75.2.60.5                                                                                                                                                                                            |                |
 
 ??
 Busca status y ANSWER SECTION. Distingue:
@@ -61,10 +61,18 @@ TODO ## 4. Consultar información registral
 Herramienta: WHOIS
 Busca el dominio y registra:
 
-- Registrador:
+- Registrador: 10dencehispahard SLU
 - Fechas:
-- Estados:
+  Fecha de actualización: 2026-06-30T02:24:32Z
+  Fecha de creación: 2003-07-14T16:13:40Z
+  Fecha de expiración: 2027-07-14T16:13:40Z
+- Estados: ok https://icann.org/epp#ok
 - Servidores de nombres:
+  Name Server: NS1.CDMON.NET
+  Name Server: NS2.CDMON.NET
+  Name Server: NS3.CDMON.NET
+  Name Server: NS4.CDMONDNS-01.ORG
+  Name Server: NS5.CDMONDNS-01.COM
 
 Entrega: resumen con fuente y fecha de consulta.
 
