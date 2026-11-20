@@ -1,8 +1,8 @@
-# T03 Hardening
+# E03. Bastionado de Linux
 
-> Tarea de Bastionado de redes y sistemas.
-> Hecho por Erjie Xia
-> 16 de noviembre de 2026
+_Módulo 5022. Bastionado de redes y sistemas_
+_Hecho por Erjie Xia_
+_16 de noviembre de 2026_
 
 ## Cuaderno de cambios
 
