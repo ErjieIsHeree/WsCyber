@@ -21,19 +21,20 @@ _16 de noviembre de 2026_
 12. **Antivirus**: Get-MpComputerStatus | Format-List RealTimeProtectionEnabled, IsTamperProtected, AntivirusSignatureLastUpdated
 13. **Cifrado de disco**: manage-bde -status C:
 
-| Control                | Qué veo (img) | Valor seguro                                                                           | ¿Cumple? | Qué cambiaría |
-| ---------------------- | ------------- | -------------------------------------------------------------------------------------- | -------- | ------------- |
-| Versión y edición      |               | 14 o más · 24 · habilitada                                                             |          |               |
-| Contraseñas y bloqueo  |               | 5 intentos o menos (nunca 0) · 15 min o más                                            |          |               |
-| Cuentas locales        |               | Deshabilitada · deshabilitada o gestionada con LAPS · sin privilegios de administrador |          |               |
-| Quién es administrador |               | Deshabilitada · deshabilitada o gestionada con LAPS · sin privilegios de administrador |          |               |
-| Firewall por perfiles  |               | Los tres activados; entrada bloqueada por defecto                                      |          |               |
-| RDP activado           |               | Desactivado (1) si no se usa; si se usa**: NLA (1) y TLS (2)                           |          |               |
-| SMBv1                  |               | False                                                                                  |          |               |
-| Auditoría              |               | Aciertos y errores · errores · aciertos y errores                                      |          |               |
-| Servicios              |               | Deshabilitados                                                                         |          |               |
-| Programas de inicio    |               | Solo software conocido, en rutas de programa (no en carpetas públicas ni temporales)   |          |               |
-| Antivirus              |               | Activado · activada · actualizadas                                                     |          |               |
-| Cifrado de disco       |               | Protection On                                                                          |          |               |
+| Control                | Qué veo (img)                                                     | Valor seguro                                                                                                                          | ¿Cumple? | Qué cambiaría |
+| ---------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------------- |
+| Versión y edición      | ![Versión y edición](E03-2_img\01.png)                            | 14 o más · 24 · habilitada                                                                                                            |          |               |
+| Contraseñas y bloqueo  | ![Contraseñas y bloqueo](E03-2_img/02.png)                        | 5 intentos o menos (nunca 0) · 15 min o más                                                                                           |          |               |
+| Cuentas locales        | ![Cuentas locales](E03-2_img/03.png)                              | Deshabilitada · deshabilitada o gestionada con LAPS · sin privilegios de administrador                                                |          |               |
+| Quién es administrador | ![Quién es administrador](E03-2_img/04.png)                       | Deshabilitada · deshabilitada o gestionada con LAPS · sin privilegios de administrador                                                |          |               |
+| Firewall por perfiles  | ![Firewall por perfiles](E03-2_img/05.png)                        | Los tres activados; entrada bloqueada por defecto                                                                                     |          |               |
+| RDP activado           | ![RDP activado](E03-2_img/06.png)                                 | Desactivado (1) si no se usa; si se usa**: NLA (1) y TLS (2)                                                                          |          |               |
+| RDP: NLA y TLS         | ![RDP: NLA y TLS](E03-2_img/07.png)                               | Get-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -Name UserAuthentication, SecurityLayer |          |               |
+| SMBv1                  | ![SMBv1](E03-2_img/08.png)                                        | False                                                                                                                                 |          |               |
+| Auditoría              | ![Auditoría](E03-2_img/09-1.png) ![Auditoría](E03-2_img/09-2.png) | Aciertos y errores · errores · aciertos y errores                                                                                     |          |               |
+| Servicios              | ![Servicios](E03-2_img/10.png)                                    | Deshabilitados                                                                                                                        |          |               |
+| Programas de inicio    | ![Programas de inicio](E03-2_img/11.png)                          | Solo software conocido, en rutas de programa (no en carpetas públicas ni temporales)                                                  |          |               |
+| Antivirus              | ![Antivirus](E03-2_img/12.png)                                    | Activado · activada · actualizadas                                                                                                    |          |               |
+| Cifrado de disco       | ![Cifrado de disco](E03-2_img/13.png)                             | Protection On                                                                                                                         |          |               |
 
 **Marcador** ¿cuántos de los 11 controles cumple tu equipo?
