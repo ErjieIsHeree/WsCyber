@@ -1,0 +1,11 @@
+Connecting to 148.72.152.131
+CONNECTION ESTABLISHED
+Protocol version: TLSv1.3
+Ciphersuite: TLS_AES_256_GCM_SHA384
+Peer certificate: CN=hdubric.com
+Hash used: SHA256
+Signature type: rsa_pss_rsae_sha256
+Verification: OK
+Verified peername: *.hdubric.com
+Peer Temp Key: X25519, 253 bits
+DONE

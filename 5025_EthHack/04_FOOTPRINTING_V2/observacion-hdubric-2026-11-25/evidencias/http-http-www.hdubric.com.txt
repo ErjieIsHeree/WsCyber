@@ -1,0 +1,12 @@
+HTTP/1.1 301 Moved Permanently
+Date: Wed, 25 Nov 2026 18:25:55 GMT
+Server: Apache
+X-Redirect-By: WordPress
+Upgrade: h2,h2c
+Connection: Upgrade
+Location: https://www.hdubric.com/
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer-when-downgrade
+Vary: User-Agent
+Content-Type: text/html; charset=UTF-8
+

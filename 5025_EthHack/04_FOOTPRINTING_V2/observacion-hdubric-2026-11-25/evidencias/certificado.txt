@@ -1,0 +1,6 @@
+subject=CN=hdubric.com
+issuer=C=US, O=Let's Encrypt, CN=YR2
+notBefore=Oct 29 04:25:25 2026 GMT
+notAfter=Jan 27 04:25:24 2027 GMT
+X509v3 Subject Alternative Name: 
+    DNS:*.hdubric.com, DNS:hdubric.com

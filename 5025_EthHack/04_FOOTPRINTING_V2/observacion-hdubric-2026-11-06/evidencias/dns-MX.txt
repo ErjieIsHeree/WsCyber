@@ -1,0 +1,23 @@
+
+; <<>> DiG 9.20.2-1-Debian <<>> +time +tries hdubric.com MX
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 16193
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 2
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4000
+;; QUESTION SECTION:
+;hdubric.com.			IN	MX
+
+;; ANSWER SECTION:
+hdubric.com.		14400	IN	MX	0 hdubric.com.
+
+;; ADDITIONAL SECTION:
+hdubric.com.		14018	IN	A	148.72.152.131
+
+;; Query time: 127 msec
+;; SERVER: 172.16.20.10#53(172.16.20.10) (UDP)
+;; WHEN: Fri Nov 06 11:23:16 UTC 2026
+;; MSG SIZE  rcvd: 72
+

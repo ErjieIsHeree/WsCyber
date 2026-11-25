@@ -1,0 +1,20 @@
+
+; <<>> DiG 9.20.2-1-Debian <<>> +time +tries www.hdubric.com CNAME
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 21027
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4000
+;; QUESTION SECTION:
+;www.hdubric.com.		IN	CNAME
+
+;; ANSWER SECTION:
+www.hdubric.com.	14009	IN	CNAME	hdubric.com.
+
+;; Query time: 11 msec
+;; SERVER: 172.16.20.10#53(172.16.20.10) (UDP)
+;; WHEN: Fri Nov 06 11:23:24 UTC 2026
+;; MSG SIZE  rcvd: 58
+

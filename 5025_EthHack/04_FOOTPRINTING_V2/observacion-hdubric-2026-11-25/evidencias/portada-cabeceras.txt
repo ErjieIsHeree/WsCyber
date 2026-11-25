@@ -1,0 +1,14 @@
+HTTP/2 200 
+vary: User-Agent,Accept-Encoding
+last-modified: Tue, 27 May 2025 22:00:43 GMT
+accept-ranges: bytes
+content-length: 90551
+x-xss-protection: 1; mode=block
+referrer-policy: no-referrer-when-downgrade
+cache-control: max-age=0, no-cache, no-store, must-revalidate
+pragma: no-cache
+expires: Mon, 29 Oct 1923 20:30:00 GMT
+content-type: text/html; charset=UTF-8
+date: Wed, 25 Nov 2026 18:26:05 GMT
+server: Apache
+

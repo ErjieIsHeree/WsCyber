@@ -1,0 +1,10 @@
+Connecting to 148.72.152.131
+depth=3 C=US, O=Internet Security Research Group, CN=ISRG Root X1
+verify return:1
+depth=2 C=US, O=ISRG, CN=Root YR
+verify return:1
+depth=1 C=US, O=Let's Encrypt, CN=YR2
+verify return:1
+depth=0 CN=hdubric.com
+verify return:1
+DONE

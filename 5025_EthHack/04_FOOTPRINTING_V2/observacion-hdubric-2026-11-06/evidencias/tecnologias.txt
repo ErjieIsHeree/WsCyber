@@ -1,0 +1,7 @@
+wp-content/plugins/elementor
+wp-content/plugins/elementor-pro
+wp-content/plugins/header-footer-elementor
+wp-content/plugins/wonderplugin-3dcarousel
+wp-content/plugins/wp-fastest-cache-premium
+wp-content/plugins/wpforms-lite
+wp-content/themes/hello-elementor
